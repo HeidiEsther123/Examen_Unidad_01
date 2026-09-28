@@ -1,0 +1,16 @@
+1. Explica dos diferencias entre una API REST y un servidor GraphQL. 
+Respuesta: Los REST son rutas con respuestas fijas no puedes cambiar a tu antojo en cambio GraphQL es una sola ruta donde el cliente puede escribir lo s campos que quiera.
+
+2. Indica una situación en la que conviene usar REST y otra en la que conviene usar GraphQL. 
+Respuesta: El REST conviene cuando lo que necesitas guardar es algo fácil(guardar, listar, borrar, buscar y crear) mientras GraphQL es mas conveniente cuando los datos están relacionados  o cuando varias apps necesitan cosas distintas. muy usado en insta o Facebook.
+
+3. ¿Qué diferencia hay entre una imagen y un contenedor? ¿Qué papel cumple el Dockerfile en esa relación?
+Respuesta: la imagen es un paquete cerrado que trae todo lo que la app  necesita pero no se ejecuta por si sola. El contenedor es esa imagen que ya esta corriendo, tú puedes tenr varios contenedores de una misma imagen. Por ultimo el Dockerfile son las instrucciones escritas para fabricar la imagen.
+
+4. ¿Para qué sirve Docker Compose? En el mapeo 8000:8000, ¿Qué representa el primer 8000 y qué representa el segundo? 
+Respuesta: En simples palabras sin el tú deberías de levantar por separado la api y el SQL a mano y con comando engorrosos, además el Compose hace que los contenedores se vean entre si por el nombre del servicio. En el mapeo  el 8000:8000 funciona un comunicador entre dos lados 
+el primer 8000 es el puerto de la computadora mientras el segundo 8000 es el puerto dentro del contenedor.
+
+5. ¿Por qué las laptops del ejercicio 1 se guardan en MySQL y no en una lista de Python? ¿Qué identifica la llave primaria id?
+Respuesta:  Una lista de Python vive en la memoria, así que si apagas la app se borra todo mentirás que en MySQL guarda los datos en disco.
+El id: es la llave primaria, el "folio" de cada laptop. Es único y no se puede repetir a menos que sea borrado y puesto a mano, no puede quedar vacío y MySQL lo asigna solo (4, 5...). Sirve para encontrar una laptop exacta, como en GET /laptops/2.
